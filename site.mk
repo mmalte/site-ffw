@@ -20,11 +20,12 @@ GLUON_SITE_PACKAGES := \
 	gluon-status-page \
 	iwinfo \
 	iptables \
+	iperf-mt \
 	haveged
 
 
 #DEFAULT_GLUON_RELEASE := 0.6~exp$(shell date '+%Y%m%d')
-DEFAULT_GLUON_RELEASE := 0.5.91-ffw-20141122
+DEFAULT_GLUON_RELEASE := 0.6.0-ffw-20150103
 
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
