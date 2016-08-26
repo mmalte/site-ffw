@@ -25,6 +25,7 @@ GLUON_SITE_PACKAGES := \
   iptables \
   iwinfo \
   iperf \
+  fastd-auto-mtu
 
 ifeq ($(GLUON_TARGET),x86-generic)
 GLUON_SITE_PACKAGES += \
@@ -38,10 +39,10 @@ GLUON_SITE_PACKAGES += \
   vnstat
 endif
 
-DEFAULT_GLUON_RELEASE := wup-STARTDATE
+DEFAULT_GLUON_RELEASE := wup-$(shell date '+%Y%m%d')
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
 GLUON_PRIORITY ?= 0
-GLUON_LANGS ?= de en fr
+GLUON_LANGS ?= de
 
 GLUON_TARGET ?= ar71xx-generic
 GLUON_BRANCH := stable
